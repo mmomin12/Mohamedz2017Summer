@@ -29,7 +29,7 @@
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:background="@android:color/holo_orange_dark"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_alignParentLeft="true"/>
 
         <Button
@@ -37,7 +37,7 @@
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:background="@android:color/holo_orange_dark"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
