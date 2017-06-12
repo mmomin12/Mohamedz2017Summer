@@ -1,11 +1,23 @@
 package com.example.zaeem.mohamedz2017summer;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.zaeem.mohamedz2017summer.adapter.BaseViewPagerAdapter;
+import com.example.zaeem.mohamedz2017summer.fragment.BlueFragment;
+import com.example.zaeem.mohamedz2017summer.fragment.GreenFragment;
+import com.example.zaeem.mohamedz2017summer.fragment.RedFragment;
+
+import java.util.ArrayList;
+
 public class viewPagerActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private ArrayList<Fragment> list = new ArrayList<Fragment>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +25,15 @@ public class viewPagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_pager);
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show();
         Log.d("LifeCycle","onCreate");
+        viewPager = (ViewPager) findViewById(R.id.activity_view_pager);
+        list.add(new RedFragment());
+        list.add(new GreenFragment());
+        list.add(new BlueFragment());
+        BaseViewPagerAdapter pagerAdapter =
+                new BaseViewPagerAdapter(getSupportFragmentManager(),list);
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(1);
+
     }
 //
     public viewPagerActivity() {
