@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
     tools:context="com.example.zaeem.mohamedz2017summer.LaunchModeActivity">
 
+
 </android.support.constraint.ConstraintLayout>

@@ -14,7 +14,7 @@ public class viewPagerActivity extends AppCompatActivity {
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show();
         Log.d("LifeCycle","onCreate");
     }
-
+//
     public viewPagerActivity() {
         super();
     }

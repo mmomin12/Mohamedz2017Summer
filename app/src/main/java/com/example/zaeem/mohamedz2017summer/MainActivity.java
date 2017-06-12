@@ -12,7 +12,7 @@ import com.example.zaeem.mohamedz2017summer.fragment.DemoFragment;
 import com.example.zaeem.mohamedz2017summer.fragment.WorkFragment;
 
 public class MainActivity extends AppCompatActivity {
-
+//
     private TextView demo_tv;
     private TextView work_tv;
 

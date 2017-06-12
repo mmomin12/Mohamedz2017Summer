@@ -19,7 +19,7 @@ import static android.graphics.Color.BLACK;
  */
 
 public class ListNormalAdapter extends BaseAdapter {
-
+//
     private final Context context;
     private final LayoutInflater inflater;
     private final ArrayList<String> list;
