@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".viewPagerActivity" />
-        <activity android:name=".LaunchModeActivity"
-            android:launchMode="singleInstance"></activity>
+        <activity
+            android:name=".LaunchModeActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".ScaleTypeActivity" />
+        <activity android:name=".PatchActivity"></activity>
     </application>
 
 </manifest>

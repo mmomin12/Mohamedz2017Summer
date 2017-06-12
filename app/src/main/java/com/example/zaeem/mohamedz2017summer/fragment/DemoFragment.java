@@ -12,7 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.zaeem.mohamedz2017summer.LaunchModeActivity;
+import com.example.zaeem.mohamedz2017summer.PatchActivity;
 import com.example.zaeem.mohamedz2017summer.R;
+import com.example.zaeem.mohamedz2017summer.ScaleTypeActivity;
 import com.example.zaeem.mohamedz2017summer.adapter.ListNormalAdapter;
 import com.example.zaeem.mohamedz2017summer.viewPagerActivity;
 
@@ -62,9 +64,17 @@ public class DemoFragment extends Fragment {
                         Intent intent = new Intent(getActivity(), viewPagerActivity.class);
                         startActivity(intent);
                         break;
-                    case 6:
-                        Intent intent1 = new Intent(getActivity(), LaunchModeActivity.class);
+                    case 1:
+                        Intent intent1 = new Intent(getActivity(), ScaleTypeActivity.class);
                         startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent(getActivity(),PatchActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case 6:
+                        Intent intent6 = new Intent(getActivity(), LaunchModeActivity.class);
+                        startActivity(intent6);
                     default:
                 }
             }
