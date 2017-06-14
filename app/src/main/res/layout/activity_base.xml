@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zaeem.mohamedz2017summer.LaunchModeActivity">
-
+    tools:context="com.example.zaeem.mohamedz2017summer.BaseActivity">
 
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -23,12 +24,15 @@ public class viewPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
+
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show();
         Log.d("LifeCycle","onCreate");
         viewPager = (ViewPager) findViewById(R.id.activity_view_pager);
+
         list.add(new RedFragment());
         list.add(new GreenFragment());
         list.add(new BlueFragment());
+
         BaseViewPagerAdapter pagerAdapter =
                 new BaseViewPagerAdapter(getSupportFragmentManager(),list);
         viewPager.setAdapter(pagerAdapter);
