@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.zaeem.mohamedz2017summer.NotificationActivity">
+    tools:context="com.example.sample.mohamedz2017summer.NotificationActivity">
 
     <Button
         android:id="@+id/activity_notifation_small"

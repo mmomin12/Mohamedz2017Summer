@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zaeem.mohamedz2017summer">
+    package="com.example.sample.mohamedz2017summer">
 
     <application
         android:allowBackup="true"
@@ -19,14 +19,21 @@
         <activity android:name=".viewPagerActivity" />
         <activity
             android:name=".ActivityA"
-            android:launchMode="singleInstance" />
+            android:launchMode="standard" />
         <activity android:name=".ScaleTypeActivity" />
         <activity android:name=".PatchActivity" />
-        <activity android:name=".ActivityB" />
-        <activity android:name=".ActivityC" />
-        <activity android:name=".ActivityD" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity
+            android:name=".ActivityB"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ActivityC"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActivityD"
+            android:launchMode="singleInstance" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".AdvanceListViewActivity" />
+        <activity android:name=".NotificationActivity"></activity>
     </application>
 
 </manifest>

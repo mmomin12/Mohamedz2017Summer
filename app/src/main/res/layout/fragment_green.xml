@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_green_dark"
-    tools:context="com.example.zaeem.mohamedz2017summer.fragment.GreenFragment">
+    tools:context="com.example.sample.mohamedz2017summer.fragment.GreenFragment">
 
 
 
