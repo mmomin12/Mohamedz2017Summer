@@ -1,11 +1,21 @@
 package com.example.sample.mohamedz2017summer.dialog;
 
 
+import android.app.Dialog;
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.view.View;
+
+import com.example.sample.mohamedz2017summer.R;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by zaeem on 6/21/2017.
  */
 
-public class CustomDialog extends android.app.Dialog{
+public class CustomDialog extends Dialog{
 
 
     private final ICustomDialogListner listner;

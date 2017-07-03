@@ -15,9 +15,6 @@ public class BaseViewPagerAdapter extends FragmentPagerAdapter {
 
     private ArrayList<Fragment> list;
 
-    public BaseViewPagerAdapter(FragmentManager fm) {
-        super(fm);
-    }
 
     public BaseViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> list) {
         super(fm);

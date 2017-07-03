@@ -1,12 +1,18 @@
 package com.example.sample.mohamedz2017summer;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.sample.mohamedz2017summer.adapter.AdvanceListViewAdapter;
+import com.example.sample.mohamedz2017summer.adapter.BaseViewPagerAdapter;
+import com.example.sample.mohamedz2017summer.fragment.BlueFragment;
+import com.example.sample.mohamedz2017summer.fragment.GreenFragment;
+import com.example.sample.mohamedz2017summer.fragment.RedFragment;
 
 import java.util.ArrayList;
 
@@ -18,6 +24,8 @@ public class AdvanceListViewActivity extends BaseActivity {
     @BindView(R.id.activity_Advance_listview)
     ListView lv;
 
+    private ViewPager viewPager;
+    private ArrayList<Fragment> listfrag = new ArrayList<Fragment>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +50,6 @@ public class AdvanceListViewActivity extends BaseActivity {
         AdvanceListViewAdapter adapter = new AdvanceListViewAdapter(this, list);
         lv.setAdapter(adapter);
 
-        TextView tv = new TextView(this);
-        tv.setText("HeaderView");
-        tv.setTextSize(50);
-        lv.addHeaderView(tv);
 
         TextView tv1 = new TextView(this);
         tv1.setText("FooterView");
@@ -59,6 +63,15 @@ public class AdvanceListViewActivity extends BaseActivity {
                 showToast(String.valueOf(position));
             }
         });
+
+        viewPager = (ViewPager) findViewById(R.id.activity_advance);
+
+        listfrag.add(new RedFragment());
+        listfrag.add(new GreenFragment());
+        listfrag.add(new BlueFragment());
+
+        BaseViewPagerAdapter pager = new BaseViewPagerAdapter(getSupportFragmentManager(),listfrag);
+        viewPager.setAdapter(pager);
 
     }
 }

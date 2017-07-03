@@ -26,18 +26,13 @@ import butterknife.OnClick;
 public class WorkFragment extends Fragment {
     Button buttons;
 
-    @OnClick(R.id.button_quiz2)
-    public void Quiz2(View v){
+    Button quiz2;
 
-       CustomDialogquiz2 customDialogquiz2 = new CustomDialogquiz2(getContext());
-       customDialogquiz2.show();
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         UtilLog.d("Fragment","WorkFragment:onCreate");
-        System.exit(0);
     }
 
     @Override
@@ -46,6 +41,20 @@ public class WorkFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_work, container, false);
+        quiz2 = (Button) v.findViewById(R.id.button_quiz2);
+        quiz2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDialogquiz2 customDialog = new CustomDialogquiz2(getContext(), new CustomDialog.ICustomDialogListner() {
+                    @Override
+                    public void onOKClicked(String msg) {
+                        Toast.makeText(getContext(),msg,Toast.LENGTH_SHORT).show();
+                    }
+                });
+                customDialog.setCanceledOnTouchOutside(true);
+                customDialog.show();
+            }
+        });
 
         buttons = (Button) v.findViewById(R.id.Submit_button_id);
         buttons.setOnClickListener(new View.OnClickListener() {
