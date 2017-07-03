@@ -1,6 +1,7 @@
 package com.example.sample.mohamedz2017summer.util;
 
 import android.content.Context;
+import android.util.Log;
 
 /**
  * Created by YoungH on 2/8/17.
@@ -17,5 +18,8 @@ public class UtilDensity {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
+
+
+
 
 }

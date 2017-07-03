@@ -35,7 +35,7 @@ public class viewPagerActivity extends AppCompatActivity {
         BaseViewPagerAdapter pagerAdapter =
                 new BaseViewPagerAdapter(getSupportFragmentManager(),list);
         viewPager.setAdapter(pagerAdapter);
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(0);
 
     }
 //

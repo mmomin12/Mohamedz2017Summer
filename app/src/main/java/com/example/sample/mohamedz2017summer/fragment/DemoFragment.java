@@ -14,11 +14,22 @@ import android.widget.ListView;
 
 import com.example.sample.mohamedz2017summer.ActivityA;
 import com.example.sample.mohamedz2017summer.AdvanceListViewActivity;
+import com.example.sample.mohamedz2017summer.AdvanceViewPagerActivity;
+import com.example.sample.mohamedz2017summer.AnimationActivity;
+import com.example.sample.mohamedz2017summer.AnimatorActivity;
+import com.example.sample.mohamedz2017summer.CheckBoxActivity;
+import com.example.sample.mohamedz2017summer.DialogActivity;
+import com.example.sample.mohamedz2017summer.GestureActivity;
+import com.example.sample.mohamedz2017summer.HandlerActivity;
 import com.example.sample.mohamedz2017summer.NotificationActivity;
 import com.example.sample.mohamedz2017summer.PatchActivity;
 import com.example.sample.mohamedz2017summer.R;
+import com.example.sample.mohamedz2017summer.RadioGroupActivity;
+import com.example.sample.mohamedz2017summer.ResultActivity;
 import com.example.sample.mohamedz2017summer.ScaleTypeActivity;
+import com.example.sample.mohamedz2017summer.SharedPreferenceActivity;
 import com.example.sample.mohamedz2017summer.adapter.ListNormalAdapter;
+import com.example.sample.mohamedz2017summer.audio.BaseBean;
 import com.example.sample.mohamedz2017summer.viewPagerActivity;
 
 import java.util.ArrayList;
@@ -37,10 +48,18 @@ public class DemoFragment extends Fragment {
         contentList.add("9Patch");
         contentList.add("Notification");
         contentList.add("AdvanceListView");
-        contentList.add("B");
-        contentList.add("C");
+        contentList.add("AdvanceViewPager");
         contentList.add("LaunchMode");
-        contentList.add("E");
+        contentList.add("ActivityResult");
+        contentList.add("RadioGroup");
+        contentList.add("CheckBox");
+        contentList.add("Dialogs");
+        contentList.add("Handler");
+        contentList.add("H");
+        contentList.add("Animations");
+        contentList.add("Animator");
+        contentList.add("Gesture");
+        contentList.add("SharedPreference");
     }
 
 
@@ -84,15 +103,68 @@ public class DemoFragment extends Fragment {
                         Intent intent4 = new Intent(getActivity(), AdvanceListViewActivity.class);
                         startActivity(intent4);
                         break;
+                    case 5:
+                        Intent intent5 = new Intent(getActivity(), AdvanceViewPagerActivity.class);
+                        startActivity(intent5);
+                        break;
+                    case 6:
+                        Intent intent6 = new Intent(getActivity(), ActivityA.class);
+                        intent6.putExtra("StringInfo","FromDemoFragment");
+                        intent6.putExtra("Int",10);
+                        Bundle bundle = new Bundle();
+                        BaseBean bean = new BaseBean();
+                        bean.setName("bean");
+                        bundle.putString("SingleBundle","FromDemoFragment");
+                        intent6.putExtra("Bundle",bundle);
+                        bundle.putSerializable("Object",bean);
+                        startActivity(intent6);
+                        break;
                     case 7:
-                        Intent intent8 = new Intent(getActivity(), ActivityA.class);
+                        Intent intent7 = new Intent(getActivity(), ResultActivity.class);
+                        startActivity(intent7);
+                        break;
+                    case 8:
+                        Intent intent8 = new Intent(getActivity(), RadioGroupActivity.class);
                         startActivity(intent8);
                         break;
+                    case 9:
+                        Intent intent9 = new Intent(getActivity(), CheckBoxActivity.class);
+                        startActivity(intent9);
+                        break;
+                    case 10:
+                        Intent intent10 = new Intent(getActivity(), DialogActivity.class);
+                        startActivity(intent10);
+                        break;
+                    case 11:
+                        Intent intent11 = new Intent(getActivity(), HandlerActivity.class);
+                        startActivity(intent11);
+                        break;
+                    case 12:
+                        //Intent intent12 = new Intent(getActivity(), AnimationActivity.class);
+                        //startActivity(intent12);
+                        break;
+                    case 13:
+                        Intent intent13 = new Intent(getActivity(), AnimationActivity.class);
+                        startActivity(intent13);
+                        break;
+                    case 14:
+                        Intent intent14 = new Intent(getActivity(), AnimatorActivity.class);
+                        startActivity(intent14);
+                        break;
+                    case 15:
+                        Intent intent15 = new Intent(getActivity(), GestureActivity.class);
+                        startActivity(intent15);
+                        break;
+                    case 16:
+                        Intent intent16 = new Intent(getActivity(), SharedPreferenceActivity.class);
+                        startActivity(intent16);
+                        break;
+
+
 
                 }
             }
         });
-
 
 
         return view;
