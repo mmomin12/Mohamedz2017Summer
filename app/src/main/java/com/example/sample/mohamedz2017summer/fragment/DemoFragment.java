@@ -27,6 +27,7 @@ import com.example.sample.mohamedz2017summer.R;
 import com.example.sample.mohamedz2017summer.RadioGroupActivity;
 import com.example.sample.mohamedz2017summer.ResultActivity;
 import com.example.sample.mohamedz2017summer.ScaleTypeActivity;
+import com.example.sample.mohamedz2017summer.ServiceActivity;
 import com.example.sample.mohamedz2017summer.SharedPreferenceActivity;
 import com.example.sample.mohamedz2017summer.adapter.ListNormalAdapter;
 import com.example.sample.mohamedz2017summer.audio.BaseBean;
@@ -60,6 +61,7 @@ public class DemoFragment extends Fragment {
         contentList.add("Animator");
         contentList.add("Gesture");
         contentList.add("SharedPreference");
+        contentList.add("Services&Broadcast");
     }
 
 
@@ -158,6 +160,10 @@ public class DemoFragment extends Fragment {
                     case 16:
                         Intent intent16 = new Intent(getActivity(), SharedPreferenceActivity.class);
                         startActivity(intent16);
+                        break;
+                    case 17:
+                        Intent intent17 = new Intent(getActivity(), ServiceActivity.class);
+                        startActivity(intent17);
                         break;
 
 

@@ -46,7 +46,9 @@
         <activity android:name=".HandlerActivity" />
         <activity android:name=".AnimatorActivity" />
         <activity android:name=".GestureActivity" />
-        <activity android:name=".SharedPreferenceActivity"></activity>
+        <activity android:name=".SharedPreferenceActivity" />
+        <activity android:name=".ServiceActivity"></activity>
+        <service android:name=".service.TestService"/>
     </application>
 
 </manifest>
