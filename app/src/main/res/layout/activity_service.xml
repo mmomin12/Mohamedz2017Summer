@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:textSize="30sp"/>
 
-   
+
     <Button
         android:id="@+id/Service_start_button"
         android:layout_width="match_parent"

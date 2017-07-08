@@ -25,7 +25,7 @@ public class AdvanceListViewActivity extends BaseActivity {
     ListView lv;
 
     private ViewPager viewPager;
-    private ArrayList<Fragment> listfrag = new ArrayList<Fragment>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,7 @@ public class AdvanceListViewActivity extends BaseActivity {
         lv.setAdapter(adapter);
 
 
+
         TextView tv1 = new TextView(this);
         tv1.setText("FooterView");
         tv1.setTextSize(50);
@@ -64,14 +65,21 @@ public class AdvanceListViewActivity extends BaseActivity {
             }
         });
 
-        viewPager = (ViewPager) findViewById(R.id.activity_advance);
+        ViewPager viewPager = (ViewPager) getLayoutInflater().inflate(
+                R.layout.viewpager_layout2, null);
+        ArrayList<Fragment> listfrag = new ArrayList<Fragment>();
 
         listfrag.add(new RedFragment());
         listfrag.add(new GreenFragment());
         listfrag.add(new BlueFragment());
 
+        viewPager.setLayoutParams(new ListView.LayoutParams(
+                ListView.LayoutParams.MATCH_PARENT, 500));
+
         BaseViewPagerAdapter pager = new BaseViewPagerAdapter(getSupportFragmentManager(),listfrag);
         viewPager.setAdapter(pager);
+        lv.addHeaderView(viewPager);
+
 
     }
 }
